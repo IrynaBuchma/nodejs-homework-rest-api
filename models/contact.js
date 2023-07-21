@@ -25,6 +25,11 @@ const contactSchema = new Schema({
     },
     required: [true, 'User phone number required']
   },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: "user",
+    required: true,
+},
   favorite: {
     type: Boolean,
     default: false,
